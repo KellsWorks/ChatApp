@@ -5541,6 +5541,13 @@ react-native-communications@^2.2.1:
   resolved "https://registry.yarnpkg.com/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
   integrity sha1-eIO1ayCgAu63kMET+GFuqGksp5U=
 
+react-native-expo-fancy-alerts@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-expo-fancy-alerts/-/react-native-expo-fancy-alerts-2.1.0.tgz#2b05dd7022eb3080898483825fd4b04f9730c81c"
+  integrity sha512-3OA8z3Zs+tk371SKG+GlI1zG+iyOV/douaUPzqeNP+nyGUZTHcypKFMhxR+mSVcSM+R+/MKQk16l4eKS4HNG1w==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-gesture-handler@~1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.8.0.tgz#18f61f51da50320f938957b0ee79bc58f47449dc"

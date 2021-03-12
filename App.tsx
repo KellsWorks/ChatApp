@@ -8,6 +8,16 @@ import React, { useState } from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
 
+import {createStackNavigator} from '@react-navigation/stack'
+import { NavigationContainer } from '@react-navigation/native';
+import OnboardingScreen from './screens/Onboard/Onboarding';
+
+import Login from './screens/auth/Login';
+import Register from './screens/auth/Register';
+import ForgotPassword from './screens/auth/ForgotPassword';
+import Main from './screens/Main';
+
+
 const LoadFonts = () =>{
   return Font.loadAsync({
     'Font-normal': require('./assets/fonts/Montserrat-Regular.ttf'),
@@ -19,6 +29,8 @@ const LoadFonts = () =>{
 export default function App() {
 
   const [fontLoaded, setFontLoaded] = useState(false);
+
+  const AppStack = createStackNavigator();
 
   if(!fontLoaded){
 
@@ -33,10 +45,18 @@ export default function App() {
   }
   
   return (
-    <View style={styles.container}>
-      <Text style={{ fontFamily: 'Font-medium' }}>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+    <StatusBar style="light"/>
+    <NavigationContainer>
+      <AppStack.Navigator headerMode="none">
+        <AppStack.Screen name="Onboarding" component={OnboardingScreen}/>
+        <AppStack.Screen name="Login" component={Login}/>
+        <AppStack.Screen name="Register" component={Register}/>
+        <AppStack.Screen name="ForgotPassword" component={ForgotPassword}/>
+        <AppStack.Screen name="Main" component={Main}/>
+      </AppStack.Navigator>
+    </NavigationContainer>
+    </>
   );
 }
 
@@ -48,7 +68,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-    function useCachedResources() {
-      throw new Error('Function not implemented.');
-    }
+
 

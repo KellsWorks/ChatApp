@@ -6,10 +6,10 @@ import { StatusBar } from 'expo-status-bar';
 
 import React, { useState } from 'react';
 
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, useColorScheme, View } from 'react-native';
 
 import {createStackNavigator} from '@react-navigation/stack'
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import OnboardingScreen from './screens/Onboard/Onboarding';
 
 import Login from './screens/auth/Login';
@@ -17,6 +17,7 @@ import Register from './screens/auth/Register';
 import ForgotPassword from './screens/auth/ForgotPassword';
 import Main from './screens/Main';
 import Subscribe from './screens/auth/Subscribe';
+
 
 
 const LoadFonts = () =>{
@@ -33,6 +34,8 @@ export default function App() {
 
   const AppStack = createStackNavigator();
 
+  const colorScheme = useColorScheme()
+
   if(!fontLoaded){
 
     return(
@@ -44,11 +47,11 @@ export default function App() {
       </AppLoading>
     ); 
   }
-  
+
   return (
     <>
     <StatusBar style="light"/>
-    <NavigationContainer>
+    <NavigationContainer >
       <AppStack.Navigator headerMode="none">
         <AppStack.Screen name="Onboarding" component={OnboardingScreen}/>
         <AppStack.Screen name="Login" component={Login}/>

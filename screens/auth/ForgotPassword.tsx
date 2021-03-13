@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Font-normal',
             alignSelf: 'center',
             marginTop: 20,
+            color: 'gray',
   },
   m20: {
     margin: 20,

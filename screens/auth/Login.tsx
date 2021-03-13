@@ -16,7 +16,7 @@ const Login = () => {
     
     return (
         <>
-          <StatusBar style="dark"/>
+          <StatusBar style="light"/>
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20,}}>
             <Image style={styles.logo} source={require('../../assets/chat.png')}/>
             <Text style={{ fontFamily: 'Font-bold', color: 'gray', fontSize: 32, margin: 20 }}>CelebHub</Text>

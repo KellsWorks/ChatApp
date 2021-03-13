@@ -20,6 +20,7 @@ const FormInput = ({labelValue, placeholderText, iconType, ...rest}) => {
                 placeholderTextColor="#666"
                 {...rest}
                 style={styles.input}
+                selectionColor='#e8505b'
             />
         </View>
     );

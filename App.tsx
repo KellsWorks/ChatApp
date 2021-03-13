@@ -16,6 +16,7 @@ import Login from './screens/auth/Login';
 import Register from './screens/auth/Register';
 import ForgotPassword from './screens/auth/ForgotPassword';
 import Main from './screens/Main';
+import Subscribe from './screens/auth/Subscribe';
 
 
 const LoadFonts = () =>{
@@ -54,6 +55,7 @@ export default function App() {
         <AppStack.Screen name="Register" component={Register}/>
         <AppStack.Screen name="ForgotPassword" component={ForgotPassword}/>
         <AppStack.Screen name="Main" component={Main}/>
+        <AppStack.Screen name="Subscribe" component={Subscribe}/>
       </AppStack.Navigator>
     </NavigationContainer>
     </>

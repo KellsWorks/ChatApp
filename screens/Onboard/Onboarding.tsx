@@ -19,7 +19,7 @@ const OnboardingScreen = () => {
     );
 
     const Skip = () => (
-        <TouchableOpacity style={{ marginHorizontal: 10 }}>
+        <TouchableOpacity style={{ marginHorizontal: 10 }} onPress={() => navigation.navigate("Login") }>
             <Text style={{ fontFamily: 'Font-medium', color: 'white' }}>Skip</Text>
         </TouchableOpacity>
     );
@@ -40,15 +40,15 @@ const OnboardingScreen = () => {
             subTitleStyles: {fontFamily: 'Font-medium', fontSize: 17},
             },
             {
-                backgroundColor: '#03a491',
-                image: <Image source={require('../../assets/GroupChat.png')} style={{ height: 250, width: 380}}/>,
+                backgroundColor: '#e8505b',
+                image: <Image source={require('../../assets/ChatHappy.png')} style={{ height: 400, width: 380}}/>,
                 title: 'Connect with celebrities',
                 subtitle: 'Interact with Malawian celebrities',
                 titleStyles: {fontFamily: 'Font-bold', fontSize: 25},
                 subTitleStyles: {fontFamily: 'Font-medium', fontSize: 17},
                 },
             {
-            backgroundColor: '#03a491',
+            backgroundColor: '#00a7ff',
             image: <Image source={require('../../assets/GroupChat.png')} style={{ height: 250, width: 380}}/>,
             title: 'Connect with celebrities',
             subtitle: 'Interact with Malawian celebrities',
